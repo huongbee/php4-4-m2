@@ -48,7 +48,6 @@ echo $soa;
 
 // $obj = new test;
 
-// $obj->chao_ban();
-
+ //$obj->chao_ban();
 
 ?>
