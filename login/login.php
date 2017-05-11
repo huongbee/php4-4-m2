@@ -1,10 +1,18 @@
 <?php
 session_start();
 
+// $cookie_name = "test";
+// setcookie($cookie_name,'123456',time()+60);
 
-setcookie('test','123456',time()+60);
 
-echo 'đã set cookie';
+// if(isset($_COOKIE[$cookie_name])){
+// 	echo 'đã set cookie. Giá trị của cookie là: '.$_COOKIE[$cookie_name];
+// }
+// else{
+// 	echo "chưa có cookie";
+// }
+
+
 
 ?>
 

@@ -1,9 +1,19 @@
 <?php
 session_start();
 
+
+
+
+
 if(isset($_POST['login'])){
 	$_SESSION['username'] = $_POST['username'];
 	$_SESSION['password'] = $_POST['password'];
+
+
+	if(isset($_POST['remember']) && ($_POST['remember'] =="on" || $_POST['remember'] ==1)){
+		setcookie('username',"khoapham",time()+120);
+		setcookie('password','123',time()+120);
+	}
 }
 
 
@@ -22,6 +32,15 @@ if(isset($_SESSION['password']) && isset($_SESSION['username'])){
 	}
 
 }
+elseif(isset($_COOKIE['password']) && isset($_COOKIE['username'])){
+	if($_COOKIE['username'] == 'khoapham' && $_COOKIE['password'] == 123){
+		$user =  "Chào bạn $_COOKIE[username]";
+	}
+	else{
+		header('Location:login.php');
+	}
+}
+
 else{
 	header('Location:login.php');
 }
