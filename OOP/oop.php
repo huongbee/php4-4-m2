@@ -10,9 +10,9 @@ abstract class hocsinh{
 	abstract function getTen();
 
 
-	// public function hocsinh(){
-	// 	echo "lớp hocsinh vừa được khởi tạo".'<br>';
-	// }
+	public function hocsinh(){
+	echo "lớp hocsinh vừa được khởi tạo".'<br>';
+	}
 
 
 	// public function __destruct(){
